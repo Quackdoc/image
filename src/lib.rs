@@ -223,7 +223,7 @@ pub mod flat;
 /// | TGA    | Yes | Rgb8, Rgba8, Bgr8, Bgra8, Gray8, GrayA8 |
 /// | TIFF   | Baseline(no fax support) + LZW + PackBits | Rgb8, Rgba8, Gray8 |
 /// | WebP   | Yes | Rgb8, Rgba8 |
-/// | JPEG XL  | Yes | No |
+/// | JPEG XL  | Rgb, Rgba, Gray, Graya | No |
 ///
 /// ## A note on format specific features
 ///
@@ -266,7 +266,7 @@ pub mod codecs {
     pub mod ico;
     #[cfg(feature = "jpeg")]
     pub mod jpeg;
-    #[cfg(feature = "jxl")]
+    #[cfg(feature = "jxl-decoder")]
     pub mod jxl;
     #[cfg(feature = "exr")]
     pub mod openexr;
